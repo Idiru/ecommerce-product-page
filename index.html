@@ -5,6 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
     <title>Ecommerce product page</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -16,30 +19,34 @@
          <header>
             <!-- NAV AREA -->
             <nav>
-                <figure>
-                    <img src="images/logo.svg" alt="logo navbar">
-                </figure>
-                <!-- MENU AREA -->
-                <ul>
-                    <li>Collections</li>
-                    <li>Men</li>
-                    <li>Women</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                </ul>
+                <div class="container-nav-primary">
+                    <figure>
+                        <img src="images/logo.svg" alt="logo navbar">
+                    </figure>
+                    <!-- MENU AREA -->
+                    <ul>
+                        <li>Collections</li>
+                        <li>Men</li>
+                        <li>Women</li>
+                        <li>About</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
                 <!-- CART & PROFILE AREA -->
-                <ul>
+                <div class="container-nav-secondary">
+                    <ul>
                     <li>
                         <picture>
-                            <img src="images/icon-cart.svg" alt="icon cart">
+                            <img class="icon-cart" src="images/icon-cart.svg" alt="icon cart">
                         </picture>
                     </li>
                     <li>
                         <figure>
-                            <img src="images/image-avatar.png" alt="profile picture">
+                            <img class="profile-picture" src="images/image-avatar.png" alt="profile picture">
                         </figure>
                     </li>
                 </ul>
+                </div>
             </nav>
          </header>
         <!-- PRODUCT AREA -->
@@ -86,7 +93,6 @@
                 </article>
             </div>
         </div>
-<!-- FOOTER AREA -->
     </main>
 </body>
 </html>
