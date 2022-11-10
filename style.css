@@ -21,6 +21,25 @@ body {
     overflow-x: hidden;
 }
 
+h1 {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    color: #1D2026;
+    padding-bottom: 0.9rem;
+}
+
+p {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #69707D;
+}
+
 /* CONTAINER STYLES */
 
 main {
@@ -207,7 +226,30 @@ nav ul {
 
 /* PRODUCT AREA STYLES */
 
+.container-product {
+    display: flex;
+}
+
+.container-product-images {
+    display: flex;
+}
+
+@media screen and (max-width: 1080px) {
+    .container-product {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 /* PRODUCT - PRODUCT IMAGE AREA STYLES */
+
+@media screen and (max-width: 1080px) {
+
+    .container-product-images img {
+        width: 23.4rem;
+        height: 18.75rem;
+    }
+}
 
 /* PRODUCT - PRODUCT IMAGE - PRODUCT IMAGE MAIN AREA STYLES */
 
@@ -215,9 +257,92 @@ nav ul {
 
 /* PRODUCT - PRODUCT DESCRIPTION AREA STYLES */
 
+.container-product-description {
+    display: flex;
+}
+
+@media screen and (max-width: 1080px) {
+
+    .container-product-description {
+        padding: 1.5rem 5% 1.75rem 5%;
+        align-items: center;
+    }
+
+    .subtitle {
+        font-family: 'Kumbh Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 1.84615px;
+        text-transform: uppercase;
+        color: #FF7E1B;
+        padding-bottom: 1.2rem;
+    }
+
+    .description {
+        padding-bottom: 1.75rem;
+    }
+}
+
 /* PRODUCT - PRODUCT DESCRIPTION - DESCRIPTION AREA STYLES */
 
 /* PRODUCT - PRODUCT DESCRIPTION - QUANTITY SELECTOR & ADD TO CART AREA */
+
+.container-price {
+    display: flex;
+}
+
+.container-price-primary {
+     display: flex;
+}
+
+.current-price {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+    color: #1D2026;
+}
+
+.discount {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FF7E1B;
+    padding: 0.4rem 0.5rem;
+    background: #FFEEE2;
+    border-radius: 6px;
+}
+
+.previous-price {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    text-decoration-line: line-through;
+    color: #B6BCC8;
+}
+
+@media screen and (max-width: 1080px) {
+
+    .container-price {
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 1.6rem;
+
+
+    }
+
+    .container-price-primary {
+        gap: 1rem;
+        align-items: center;
+    }
+}
 
 
 
