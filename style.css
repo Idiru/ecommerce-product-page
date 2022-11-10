@@ -17,7 +17,6 @@ html, body {
 
 body {
     display: flex;
-    justify-content: center;
     font-family: 'Kumbh Sans', sans-serif;
     overflow-x: hidden;
 }
@@ -29,7 +28,6 @@ main {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     overflow-x: hidden;
 }
 
@@ -39,6 +37,7 @@ header {
     width: 100%;
     height: 100%;
     display: flex;
+    justify-content: center;
 }
 
 /* HEADER - NAV AREA STYLES */
@@ -46,76 +45,164 @@ header {
 nav {
     width: 100%;
     height: 100%;
-    margin: 0 10rem;
-    border-bottom: #E4E9F2 solid;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all .3s ease-in-out;
 }
 
 nav ul {
     display: flex;
-    gap: 2rem;
     align-items: center;
 
 }
 
-nav ul li {
-    width: 100%;
-    height: 100%;
-    font-family: 'Kumbh Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 26px;
-    display: inline;
+@media screen and (max-width: 1080px) {
+
+    nav {
+        padding: 1.2rem 1.5rem 1.6rem 1.5rem;
+        gap: 5.5rem;
+    }
+
+    figure {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        padding-left: 1rem;
+        transition: all .3s ease-in-out;
+    }
+
+    .icon-burger {
+        width: 16px;
+        height: 15px;
+    }
+
+}
+
+@media screen and (min-width: 1080px) {
+
+    nav {
+        margin: 0 10rem 0 10rem;
+        border-bottom: #E4E9F2 solid;
+    }
+
+    nav ul li {
+        width: 100%;
+        height: 100%;
+        font-family: 'Kumbh Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 26px;
+        display: inline;
+    }
+
+    .container-nav-primary ul {
+        display: flex;
+        gap: 2.25rem;
+    }
+
+    .container-nav-primary ul li {
+        padding: 2.7rem 0;
+    }
 }
 
 /* HEADER - NAV - MENU AREA STYLES */
 
-.container-nav-primary li {
-    color: #69707D;
-    border-bottom: transparent solid 4px;
-    padding: 2.5rem 0;
-    transition: all .3s ease-in-out;
+@media screen and (max-width: 1080px) {
 
+    .container-nav-primary {
+        gap: 1rem;
+    }
 
+    .icon-burger {
+         display: initial;
+     }
+
+    .container-nav-primary ul {
+        display: none;
+    }
 }
 
-.container-nav-primary li:hover {
-    border-bottom: #FF7E1B solid 4px;
-    padding: 2.5rem 0;
-    transition: all .3s ease-in-out;
+@media screen and (min-width: 1080px) {
 
-}
+     .icon-burger {
+         display: none;
+     }
 
-.container-nav-primary {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    gap: 3.5rem;
-    align-items: center;
+
+    .container-nav-primary li {
+        color: #69707D;
+        border-bottom: transparent solid 4px;
+        padding: 2.5rem 0;
+        transition: all .3s ease-in-out;
+    }
+
+    .container-nav-primary li:hover {
+        border-bottom: #FF7E1B solid 4px;
+        padding: 2.5rem 0;
+        transition: all .3s ease-in-out;
+    }
+
+    .container-nav-primary {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 3.5rem;
+        align-items: center;
+    }
 }
 
 /* HEADER - NAV - CART & PROFILE AREA STYLES */
 
-.icon-cart:hover {
-    filter: invert(57%) sepia(57%) saturate(1817%) contrast(108%);
-    transition: all .3s ease-in-out;
-
+.container-nav-secondary {
+    display: flex;
 }
 
-.profile-picture {
+@media screen and (max-width: 1080px) {
+
+    .container-nav-secondary ul {
+        gap: 1.3rem;
+    }
+
+    .profile-picture {
+        width: 24px;
+        height: 24px;
+        border-radius: 25px;
+        border: transparent solid 2px;
+        transition: all .3s ease-in-out;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+
+    .container-nav-secondary {
+    align-items: center;
+    }
+
+    .container-nav-secondary ul {
+        gap: 2.9rem;
+    }
+
+    .icon-cart:hover {
+    filter: invert(57%) sepia(57%) saturate(1817%) contrast(108%);
+    transition: all .3s ease-in-out;
+    }
+
+    .profile-picture {
     width: 50px;
     height: 50px;
     border-radius: 25px;
     border: transparent solid 2px;
     transition: all .3s ease-in-out;
-}
+    }
 
-.profile-picture:hover {
+    .profile-picture:hover {
     border: #FF7E1B solid 2px;
     transition: all .3s ease-in-out;
+    }
 }
 
 /* PRODUCT AREA STYLES */
