@@ -11,7 +11,7 @@ li {
 }
 
 html, body {
-    width: 100%;
+    width: 100vw;
     height: auto;
 }
 
@@ -19,6 +19,7 @@ body {
     display: flex;
     font-family: 'Kumbh Sans', sans-serif;
     overflow-x: hidden;
+    position: relative;
 }
 
 h1 {
@@ -56,7 +57,6 @@ header {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
 }
 
 /* HEADER - NAV AREA STYLES */
@@ -72,11 +72,14 @@ nav {
 
 nav ul {
     display: flex;
-    align-items: center;
-
 }
 
 @media screen and (max-width: 1080px) {
+
+    header {
+        flex-wrap: wrap;
+
+    }
 
     nav {
         padding: 1.2rem 1.5rem 1.6rem 1.5rem;
@@ -93,14 +96,35 @@ nav ul {
         transition: all .3s ease-in-out;
     }
 
-    .icon-burger {
-        width: 16px;
-        height: 15px;
+
+    .container-menu-mobile {
+        width: 70%;
+        min-height: 100%;
+        background-color: #FFFFFF;
+        padding-left: 1.5rem;
+        position: absolute;
+        align-items: unset;
+        z-index: 1;
+        display: none;
     }
 
+    .menu-mobile {
+        padding-top: 5.75rem;
+    }
+
+    .menu-mobile li {
+        font-family: 'Kumbh Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+        color: #1D2026;
+        padding-bottom: 1.25rem;
+    }
 }
 
 @media screen and (min-width: 1080px) {
+
 
     nav {
         margin: 0 10rem 0 10rem;
@@ -136,11 +160,24 @@ nav ul {
         gap: 1rem;
     }
 
-    .icon-burger {
-         display: initial;
-     }
+    .container-icons-mobile {
+        z-index: 2;
+    }
 
-    .container-nav-primary ul {
+    .icon-burger {
+        width: 16px;
+        height: 15px;
+        z-index: 99999;
+    }
+
+    .icon-close {
+        width: 16px;
+        height: 15px;
+        z-index: 99999;
+        display: none;
+    }
+
+    .menu-desktop {
         display: none;
     }
 }
@@ -251,6 +288,7 @@ nav ul {
     .product-image {
         width: 23.4rem;
         height: 18.75rem;
+        position: relative;
     }
 
     .container-buttons {
@@ -266,6 +304,7 @@ nav ul {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        position: static;
     }
 
     .container-previous-button-bcg {
@@ -394,7 +433,15 @@ nav ul {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
+}
+
+.icon-minus:hover path {
+        fill: #FFAB6A;
+}
+
+.icon-plus:hover path  {
+    fill: #FFAB6A;
+}
 
 .add-to-cart-cta {
         background: #FF7E1B;
@@ -415,7 +462,6 @@ nav ul {
 
 .add-to-cart-cta path {
     fill: #FFFFFF;
-
 }
 
 .add-to-cart-cta p {
@@ -459,6 +505,17 @@ nav ul {
         height: 3.6rem;
     }
 
+}
+
+
+/* Display rules */
+
+.on {
+    display: block;
+}
+
+.off {
+    display: none;
 }
 
 
