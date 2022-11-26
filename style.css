@@ -461,6 +461,10 @@ nav ul {
         display: flex;
     }
 
+    .thumbnail:hover {
+        filter: opacity(30%);
+    }
+
     .image-active {
         border: 2px solid #FF7E1B;
     }
@@ -534,6 +538,12 @@ nav ul {
 /* PRODUCT - PRODUCT DESCRIPTION - DESCRIPTION AREA STYLES */
 
 /* PRODUCT - PRODUCT DESCRIPTION - QUANTITY SELECTOR & ADD TO CART AREA */
+
+.quantity, button {
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+}
 
 .container-price {
     display: flex;

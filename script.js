@@ -48,6 +48,9 @@ secondaryImages.forEach((image, index) => {
 // Add items cart
 
 const quantitySelector = Array.from(document.querySelectorAll(".quantity-selector"))
+const cartListFilled = document.querySelectorAll(".cart-list-filled")
+const cartListEmpty = document.querySelectorAll(".cart-list-empty")
+const addToCartCta = document.querySelector(".add-to-cart-cta")
 let quantity = 0
 let frontDisplay = document.querySelector(".quantity")
 
@@ -60,6 +63,17 @@ function modifyQuantity (i) {
         }
 }
 
+function displayCartList () {
+    if (quantity >= 0) {
+        cartListFilled.style.remove("off")
+        cartListFilled.style.add("on")
+        cartListEmpty.style.remove("on")
+        cartListEmpty.style.add("off")
+    }
+    else {
+        return false
+    }
+}
 
 
 quantitySelector.forEach((selector, index) => {
@@ -67,6 +81,10 @@ quantitySelector.forEach((selector, index) => {
         modifyQuantity(index)
         frontDisplay.innerHTML = quantity
     })
+})
+
+addToCartCta.addEventListener("click", () => {
+    displayCartList()
 })
 
 
