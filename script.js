@@ -52,10 +52,10 @@ let quantity = 0
 let frontDisplay = document.querySelector(".quantity")
 
 function modifyQuantity (i) {
-        if (i === 0) {
+        if (i === 0 && quantity !== 0) {
             quantity--
         }
-        else {
+        else if (i === 1){
             quantity++
         }
 }
