@@ -14,7 +14,6 @@ burgerMenu.addEventListener("click", () => {
 })
 
 iconCart.addEventListener("click", () => {
-        cart.classList.toggle("off")
         cart.classList.toggle("on")
 })
 
@@ -52,9 +51,11 @@ const cartListFilled = document.querySelector(".cart-list-filled")
 const cartListEmpty = document.querySelector(".cart-list-empty")
 const cartListCta = document.querySelector(".cart-list-CTA")
 const addToCartCta = document.querySelector(".add-to-cart-cta")
+const quantityResult = document.querySelector(".price")
 
 let quantity = 0
-let price = 0
+let quantityList = 0
+let price = 125
 
 let frontDisplay = Array.from(document.querySelectorAll(".quantity"))
 
@@ -77,10 +78,9 @@ function displayCartList () {
         cartListEmpty.style.display = "none"
         cartListFilled.style.display = "flex"
         cartListCta.style.display = "flex"
-        console.log(quantity)
-        console.log("if")
+
     }
-    else {
+    else if (quantity === 0) {
         cartListEmpty.style.display = "flex"
         cartListFilled.style.display = "none"
         cartListCta.style.display = "none"
@@ -93,16 +93,15 @@ function displayCartList () {
 quantitySelector.forEach((selector, index) => {
     selector.addEventListener("click", () => {
         modifyQuantity(index)
-        frontDisplay.innerHTML = quantity
-        for (const i in frontDisplay) {
-            frontDisplay[i].innerHTML = quantity
-        }
+        frontDisplay[0].innerHTML = quantity
     })
 })
 
 
 addToCartCta.addEventListener("click", () => {
     displayCartList()
+    frontDisplay[1].innerHTML = quantity
+    quantityResult.innerHTML = quantity * price
 })
 
 
