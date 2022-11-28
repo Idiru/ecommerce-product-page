@@ -311,7 +311,7 @@ nav ul {
 }
 
 .cart-list-filled {
-    display: flex;
+    display: none;
     padding: 1.5rem;
 }
 
@@ -330,7 +330,7 @@ nav ul {
 }
 
 .cart-list-CTA {
-    display: flex;
+    display: none;
     justify-content: center
 }
 

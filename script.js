@@ -48,30 +48,44 @@ secondaryImages.forEach((image, index) => {
 // Add items cart
 
 const quantitySelector = Array.from(document.querySelectorAll(".quantity-selector"))
-const cartListFilled = document.querySelectorAll(".cart-list-filled")
-const cartListEmpty = document.querySelectorAll(".cart-list-empty")
+const cartListFilled = document.querySelector(".cart-list-filled")
+const cartListEmpty = document.querySelector(".cart-list-empty")
+const cartListCta = document.querySelector(".cart-list-CTA")
 const addToCartCta = document.querySelector(".add-to-cart-cta")
+
 let quantity = 0
-let frontDisplay = document.querySelector(".quantity")
+let price = 0
+
+let frontDisplay = Array.from(document.querySelectorAll(".quantity"))
+
 
 function modifyQuantity (i) {
         if (i === 0 && quantity !== 0) {
             quantity--
-        }
-        else if (i === 1){
+            console.log(quantity)
+            frontDisplay.innerHTML = quantity
+        } else if (i === 1) {
             quantity++
+            console.log("lol2")
+            console.log(quantity)
         }
 }
 
 function displayCartList () {
-    if (quantity >= 0) {
-        cartListFilled.style.remove("off")
-        cartListFilled.style.add("on")
-        cartListEmpty.style.remove("on")
-        cartListEmpty.style.add("off")
+
+    if (quantity >= 1) {
+        cartListEmpty.style.display = "none"
+        cartListFilled.style.display = "flex"
+        cartListCta.style.display = "flex"
+        console.log(quantity)
+        console.log("if")
     }
     else {
-        return false
+        cartListEmpty.style.display = "flex"
+        cartListFilled.style.display = "none"
+        cartListCta.style.display = "none"
+        console.log(quantity)
+        console.log("else")
     }
 }
 
@@ -80,8 +94,12 @@ quantitySelector.forEach((selector, index) => {
     selector.addEventListener("click", () => {
         modifyQuantity(index)
         frontDisplay.innerHTML = quantity
+        for (const i in frontDisplay) {
+            frontDisplay[i].innerHTML = quantity
+        }
     })
 })
+
 
 addToCartCta.addEventListener("click", () => {
     displayCartList()
