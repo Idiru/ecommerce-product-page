@@ -341,7 +341,7 @@ nav ul {
 @media screen and (min-width: 1080px) {
     .container-cart {
         right: 2%;
-        top: 10%;
+        top: 6%;
     }
 }
 @media screen and (max-width: 1080px) {
@@ -423,7 +423,14 @@ nav ul {
     .previous-button, .next-button {
         width: 10px;
         height: 15px;
+    }
 
+    .previous-button {
+        padding-right: 5px;
+    }
+
+    .next-button {
+        padding-left: 5px;
     }
 
       .container-next-button {
@@ -446,6 +453,11 @@ nav ul {
 
     .container-product-images-secondary {
         display: none;
+    }
+
+    .container-image-focus {
+        display: none;
+
     }
 
 }
@@ -505,39 +517,89 @@ nav ul {
     }
 
     .container-image-focus {
-        display: flex;
-        width: 100%;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(29, 32, 38, 0.8);
+        top: 0;
+        position: fixed;
+        display: none;
+        flex-flow: column;
         justify-content: center;
+        align-items: center;
+    }
+
+    .container-image-focus-close {
+        width: 550px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .icon-close-focus {
+        margin: 1.5rem 0;
+    }
+
+    .icon-close-focus:hover path {
+        fill: #FF7E1B;
+    }
+
+    .container-image-focus-elements {
+        display: flex;
+        justify-content: center;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 
     .image-focus-product-image {
         width: 550px;
         height: 550px;
         border-radius: 0.9rem;
+
     }
 
     .image-focus-container-buttons {
+        width: 610px;
+        height: 34.4rem;
+        position: absolute;
         display: flex;
         justify-content: space-between;
-        position: absolute;
     }
 
     .image-focus-container-previous-button {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: static;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-focus-container-button-bcg {
+        width: 56px;
+        height: 56px;
+        background-color: #FFFFFF;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .image-focus-container-next-button {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: static;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: static;
+    }
+
+    .previous-button:hover path {
+        stroke: #FF7E1B;
+    }
+
+    .next-button:hover path {
+        stroke: #FF7E1B;
     }
 }
+
 
 /* PRODUCT - PRODUCT IMAGE - PRODUCT IMAGE MAIN AREA STYLES */
 

@@ -13,8 +13,12 @@ burgerMenu.addEventListener("click", () => {
         menuMobile.classList.toggle("on")
 })
 
+function displayCart () {
+    cart.classList.toggle("on")
+}
+
 iconCart.addEventListener("click", () => {
-        cart.classList.toggle("on")
+        displayCart()
 })
 
 // Manage image selection
@@ -100,9 +104,57 @@ quantitySelector.forEach((selector, index) => {
 
 addToCartCta.addEventListener("click", () => {
     displayCartList()
+    cart.style.display = "flex"
     frontDisplay[1].innerHTML = quantity
     quantityResult.innerHTML = quantity * price
 })
+
+// Manage focus image
+
+const popinFocus = document.querySelector(".container-image-focus")
+const closeButtonPopinFocus = document.querySelector(".icon-close-focus")
+const buttonsPopinFocusPrevious = document.querySelector(".previous")
+const buttonsPopinFocusNext = document.querySelector(".next")
+const imagePopinFocus = document.querySelector(".image-focus-product-image")
+let linksIndex = 0
+
+console.log(linksIndex)
+
+
+contentImage.addEventListener("click", () => {
+    popinFocus.classList.add("on")
+})
+
+closeButtonPopinFocus.addEventListener("click", () => {
+    popinFocus.classList.remove("on")
+})
+
+    buttonsPopinFocusPrevious.addEventListener("click", () => {
+        if (linksIndex === 0) {
+            linksIndex = 3
+            console.log(linksIndex)
+        } else {
+            linksIndex--
+            imagePopinFocus.src = links[linksIndex]
+            console.log(linksIndex)
+        }
+
+        imagePopinFocus.src = links[linksIndex]
+    })
+
+     buttonsPopinFocusNext.addEventListener("click", () => {
+        if (linksIndex === 3) {
+            linksIndex = 0
+            console.log(linksIndex)
+        } else {
+            linksIndex++
+            imagePopinFocus.src = links[linksIndex]
+            console.log(linksIndex)
+        }
+
+        imagePopinFocus.src = links[linksIndex]
+    })
+
 
 
 
