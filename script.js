@@ -56,6 +56,7 @@ const cartListEmpty = document.querySelector(".cart-list-empty")
 const cartListCta = document.querySelector(".cart-list-CTA")
 const addToCartCta = document.querySelector(".add-to-cart-cta")
 const quantityResult = document.querySelector(".price")
+const deletebutton = document.querySelector(".bean-icon")
 
 let quantity = 0
 let quantityList = 0
@@ -82,8 +83,8 @@ function displayCartList () {
         cartListEmpty.style.display = "none"
         cartListFilled.style.display = "flex"
         cartListCta.style.display = "flex"
-
     }
+
     else if (quantity === 0) {
         cartListEmpty.style.display = "flex"
         cartListFilled.style.display = "none"
@@ -104,9 +105,15 @@ quantitySelector.forEach((selector, index) => {
 
 addToCartCta.addEventListener("click", () => {
     displayCartList()
-    cart.style.display = "flex"
+    displayCart()
     frontDisplay[1].innerHTML = quantity
     quantityResult.innerHTML = quantity * price
+})
+
+deletebutton.addEventListener("click", () => {
+    quantity = 0
+    frontDisplay[0].innerHTML = quantity
+    displayCartList()
 })
 
 // Manage focus image
