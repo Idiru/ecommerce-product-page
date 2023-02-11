@@ -396,7 +396,7 @@ nav ul {
 
 /* PRODUCT - PRODUCT IMAGE AREA STYLES */
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1079px) {
 
     .product-image {
         width: 23.4rem;
@@ -813,20 +813,21 @@ nav ul {
         width: 272px;
     }
 
-}
+    /* POPIN FOCUS IMAGE*/
 
-/* POPIN FOCUS IMAGE*/
 
-.container-product-images-secondary {
-    gap: 30px;
-    display: flex;
-    justify-content: center;
-}
+    .container-product-images-secondary {
+        gap: 30px;
+        display: flex;
+        justify-content: center;
+    }
 
-/* Display rules */
+    /* Display rules */
 
-.on {
-    display: flex;
+    .on {
+        display: flex;
+    }
+
 }
 
 
