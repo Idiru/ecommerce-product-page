@@ -24,7 +24,7 @@ iconCart.addEventListener("click", () => {
 // Manage image selection
 
 
-const secondaryImages = document.querySelectorAll(".thumbnail")
+const secondaryImages = document.querySelectorAll(".product-images-secondary")
 const contentImage = document.querySelector(".product-image")
 const links = ["images/image-product-1.jpg", "images/image-product-2.jpg", "images/image-product-3.jpg", "images/image-product-4.jpg"]
 
@@ -104,10 +104,13 @@ quantitySelector.forEach((selector, index) => {
 
 
 addToCartCta.addEventListener("click", () => {
+    if (quantity >=1) {
     displayCartList()
-    displayCart()
+    cart.classList.add("on")
     frontDisplay[1].innerHTML = quantity
     quantityResult.innerHTML = quantity * price
+
+    }
 })
 
 deletebutton.addEventListener("click", () => {
@@ -164,5 +167,11 @@ closeButtonPopinFocus.addEventListener("click", () => {
 
 
 
+
+function linkedinDetection () {
+    return window.navigator.userAgent.includes("LinkedInapp")
+}
+
+const buttonCloseLinkedinPopin = document.querySelector("container-popin-linkedin-content-close-button")
 
 

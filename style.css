@@ -351,8 +351,8 @@ nav ul {
 
 @media screen and (min-width: 1080px) {
     .container-cart {
-        right: 2%;
-        top: 6%;
+        right: 7%;
+        top: 10%;
     }
 }
 @media screen and (max-width: 1080px) {
@@ -436,15 +436,7 @@ nav ul {
         height: 15px;
     }
 
-    .previous-button {
-        padding-right: 5px;
-    }
-
-    .next-button {
-        padding-left: 5px;
-    }
-
-      .container-next-button {
+    .container-next-button {
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -468,7 +460,6 @@ nav ul {
 
     .container-image-focus {
         display: none;
-
     }
 
 }
@@ -492,6 +483,7 @@ nav ul {
     }
 
     .product-images-secondary {
+        background-color: #FFFFFF;
         box-sizing: border-box;
         border-radius: 10px;
         display: flex;
@@ -524,7 +516,7 @@ nav ul {
     }
 
     .selected {
-        filter: opacity(30%);
+        filter: opacity(50%);
     }
 
     .container-image-focus {
@@ -541,12 +533,14 @@ nav ul {
 
     .container-image-focus-close {
         width: 550px;
+        padding-bottom: 25px;
         display: flex;
         flex-direction: row-reverse;
     }
 
     .icon-close-focus {
         margin: 1.5rem 0;
+        width: 20px;
     }
 
     .icon-close-focus:hover path {
@@ -562,6 +556,13 @@ nav ul {
         user-select: none;
     }
 
+    .image-focus-product-images {
+        height: 550px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
     .image-focus-product-image {
         width: 550px;
         height: 550px;
@@ -571,7 +572,6 @@ nav ul {
 
     .image-focus-container-buttons {
         width: 610px;
-        height: 34.4rem;
         position: absolute;
         display: flex;
         justify-content: space-between;
@@ -810,9 +810,17 @@ nav ul {
     }
 
     .add-to-cart-cta {
-        padding: 1rem 4.8rem;
+        width: 272px;
     }
 
+}
+
+/* POPIN FOCUS IMAGE*/
+
+.container-product-images-secondary {
+    gap: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 /* Display rules */
